@@ -24,7 +24,7 @@ tmp/
 *.zip
 *.tar.gz
 *.rar
-*.deb
+
 
 # Log file
 *.log
