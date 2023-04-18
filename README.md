@@ -23,3 +23,4 @@ You can stop your server with the command
 
 	sudo service nebulous stop
 	
+This package does not configure a firewall. If using Ubuntu Server your best bet is a tool called UFW.
