@@ -1,0 +1,10 @@
+Package: nebulous
+Version: [[version]]
+Vendor: cdecker
+Architecture: amd64
+Maintainer: Caleb Shingledecker <caleb.shingledecker@gmail.com>
+Depends: adduser,wget
+Section: httpd
+Priority: optional
+Homepage: https://github.com/cshingle/nebulous-dedicated-server-installer
+Description: Installs Nebulous Dedicated server

@@ -1,0 +1,12 @@
+#!/bin/bash
+set -x
+
+# try to remove user
+if [ -x "$(command -v deluser)" ]; then
+	deluser --quiet --system nebulous > /dev/null || true
+else
+	echo >&2 "not removing nebulous system account because deluser command was not found"
+fi
+
+rm -rf /var/lib/nebulous/
+systemctl daemon-reload

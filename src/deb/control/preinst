@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+echo "removing any existing downloads"
+rm -rf /tmp/nebulous-server
+rm -rf /tmp/nebulous-server.tar.gz
+
+echo "Downloading server package"
+wget -O /tmp/nebulous-server.tar.gz "https://drive.google.com/uc?export=download&confirm=yes&id=1l-1y5COTdiSHXWaJkY1S0OQi9T80KpwL"
+
+echo "extracting Server Package"
+mkdir /tmp/nebulous-server/
+tar -xvzf /tmp/nebulous-server.tar.gz -C /tmp/nebulous-server

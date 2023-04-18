@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+#Configure nebulous
+adduser --system --group --quiet --home /var/lib/nebulous/ nebulous
+
+echo "Moving server files"
+mkdir -p /opt/nebulous
+cp -rf /tmp/nebulous-server/Build_Server/* /opt/nebulous/
+
+cp -n /opt/nebulous/DedicatedServerConfig.xml /opt/nebulous/NebulousDedicatedServer
+chmod -R 755 /opt/nebulous/
+
+echo "Enabling service"
+systemctl enable nebulous.service
+
+echo "Cleaning up"
+rm -rf /tmp/nebulous-server
+rm -rf /tmp/nebulous-server.tar.gz
+
+echo "Nebulous dedicated server is now installed in /opt/nebulous. Edit the /opt/nebulous/ServerConfig.xml file to configure your server. Start the server with the command: sudo service nebulous start"

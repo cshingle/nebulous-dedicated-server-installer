@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+systemctl is-active --quiet nebulous && service nebulous stop || echo service not running
+systemctl disable nebulous.service && echo "service nebulous disabled" || echo "service nebulous not enabled"

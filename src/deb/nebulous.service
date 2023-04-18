@@ -1,0 +1,16 @@
+[Unit]
+Description=Nebulous Dedicated Server
+
+[Service]
+Type=simple
+User=nebulous
+Group=nebulous
+WorkingDirectory=/opt/nebulous/
+ExecStart=/opt/nebulous/NebulousDedicatedServer -nographics -batchmode -serverConfig /opt/nebulous/ServerConfig.xml
+
+Restart=on-failure
+RestartSec=30
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target
