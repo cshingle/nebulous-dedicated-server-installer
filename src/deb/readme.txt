@@ -3,7 +3,7 @@
 This package will download and install the Nebulous dedicated server. This package was created for Ubuntu Server, but should work with most Debian derived distributions. This package will download the binary, create a nebulous user and configure a systemd service.
 You can download and install the package with the following commands.
 
-    wget -o nebulous-installer.deb 'https://raw.githubusercontent.com/cshingle/nebulous-dedicated-server-installer/main/nebulous-installer.deb'
+    wget -O nebulous-installer.deb 'https://raw.githubusercontent.com/cshingle/nebulous-dedicated-server-installer/main/nebulous-installer.deb'
     sudo apt install ./nebulous-installer.deb
 	
 If you want to remove the package run the following command. The removal will clean up everything except the /opt/nebulous directory.
